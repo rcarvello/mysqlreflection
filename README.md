@@ -2,6 +2,7 @@
 <h2>A useful utility for the Object Relation Mapping of MySQL databases.</h2>
 The utility generates automatically Model classes for any tables of a given database
 schema.<br>
+It's extracted from my PHP Web MVC Framework<br>
 An auto generated MySQL class provides the following services:<br>
 <ul>
     <li>A constructor for managing a fetched table’s row or for a adding a new one</li>
