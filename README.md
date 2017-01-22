@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 <h1>MySQL Reflection</h1>
 <h2>A useful utility for the Object Relation Mapping of MySQL databases.</h2>
 The utility generates automatically Model classes for any tables of a given database
@@ -30,6 +23,3 @@ An auto generated MySQL class provides the following services:<br>
 Developers can quickly use these classes on their application.<br>
 Into the beans directory are located some auto generated classes of a MySQL schema.<br>
 DDL for MySQL schema is into a script file located into "sql" directory.<br>
-<
-</body>
-</html>
