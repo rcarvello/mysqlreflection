@@ -1,5 +1,5 @@
-<h1>MySQL Reflection</h1>
-<h2>A useful utility for the Object Relation Mapping of MySQL databases.</h2>
+# MySQL Reflection
+## A useful utility for the Object Relation Mapping of MySQL databases
 The utility generates automatically Model classes for any tables of a given database
 schema.<br>
 It's extracted from my PHP Web MVC Framework<br>
@@ -24,3 +24,9 @@ An auto generated MySQL class provides the following services:<br>
 Developers can quickly use these classes on their application.<br>
 Into the beans directory are located some auto generated classes of a MySQL schema.<br>
 DDL for MySQL schema is into a script file located into "sql" directory.<br>
+
+### Overview
+![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/MySQLReflection.png)
+
+### UML Class Model
+![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/UMLClassModel.png)
