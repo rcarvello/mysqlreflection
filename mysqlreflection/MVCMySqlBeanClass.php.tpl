@@ -378,10 +378,11 @@ SQL;
             $result = $this->query($sql);
             if (!$result) {
                 $this->lastSqlError = $this->sqlstate . " - ". $this->error;
+            } else {
+                $this->select(${ClassPkAttributeName});
+                $this->lastSql = $sql;
+                return $result;
             }
-            $this->select(${ClassPkAttributeName});
-            $this->lastSql = $sql;
-            return $result;
         } else {
             return false;
         }
@@ -412,10 +413,11 @@ SQL;
             $result = $this->query($sql);
             if (!$result) {
                 $this->lastSqlError = $this->sqlstate . " - ". $this->error;
+            } else {
+                $this->select({PKDMLFunctionParameters});
+                $this->lastSql = $sql;
+                return $result;
             }
-            $this->select({PKDMLFunctionParameters});
-            $this->lastSql = $sql;
-            return $result;
         } else {
             return false;
         }
