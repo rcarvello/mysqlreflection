@@ -1,4 +1,4 @@
-# MySQL Reflection
+# MySQLReflection
 ## A useful utility for the Object Relation Mapping of MySQL databases
 The utility generates automatically Model classes for any tables of a given database
 schema.<br>
