@@ -1,9 +1,9 @@
 # MySQLReflection
 ## A useful utility for the Object Relation Mapping of MySQL databases
 The utility generates automatically classes for any tables of a given database
-schema.<br>
-It's extracted from my PHP Web MVC Framework<br>
-An auto generated MySQL class provides the following services:<br>
+schema.
+It's extracted from my PHP Web MVC Framework
+An auto generated MySQL class provides the following services:
 
 - A constructor for managing a fetched table’s row or for a adding a new one<
 - Management for both single or composite Primary Keys
@@ -18,9 +18,9 @@ An auto generated MySQL class provides the following services:<br>
 - Camel/Pascal case naming convention for Attributes/Class used for mapping Fields/Table
 - Useful PHPDOC information about table, fields and the usage of class, attributes and methods
 
-Developers can quickly use these classes on their application.<br>
-Into the beans directory are located some auto generated classes of a MySQL schema.<br>
-DDL for MySQL schema is into a script file located into "sql" directory.<br>
+Developers can quickly use these classes on their application.
+Into the beans directory are located some auto generated classes of a MySQL schema.
+DDL for MySQL schema is into a script file located into "sql" directory.
 
 ### Overview
 ![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/MySQLReflection.png)
