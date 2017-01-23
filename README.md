@@ -1,6 +1,6 @@
 # MySQLReflection
 ## A useful utility for the Object Relation Mapping of MySQL databases
-The utility generates automatically Model classes for any tables of a given database
+The utility generates automatically classes for any tables of a given database
 schema.<br>
 It's extracted from my PHP Web MVC Framework<br>
 An auto generated MySQL class provides the following services:<br>
