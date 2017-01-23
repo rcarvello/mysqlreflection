@@ -29,5 +29,5 @@ DDL for MySQL schema is into a script file located into "sql" directory.
 ![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/UMLClassModel.png)
 
 ### Convert MySQL into PHP Classes automatically - Video Tutorial
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/7Aa_k_hWDYk/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3wURVxGteSMWeF9OtZCnrOpeVRk)]
+[![IMAGE][(https://i.ytimg.com/vi/7Aa_k_hWDYk/hqdefault.jpg custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3wURVxGteSMWeF9OtZCnrOpeVRk)]
 (https://www.youtube.com/watch?v=7Aa_k_hWDYk)
