@@ -4,23 +4,20 @@ The utility generates automatically classes for any tables of a given database
 schema.<br>
 It's extracted from my PHP Web MVC Framework<br>
 An auto generated MySQL class provides the following services:<br>
-<ul>
-    <li>A constructor for managing a fetched table’s row or for a adding a new one</li>
-    <li>Management for both single or composite Primary Keys</li>
-    <li>Automatic mapping of the different date formats may occurs between
-        application and database</li>
-    <li>Destructor to automatically close database connection</li>
-    <li>Defines a set of attributes corresponding to the table fields</li>
-    <li>Setter and Getter methods for each attribute</li>
-    <li>OO methods for simplify DML select, insert, update and delete operations</li>
-    <li>A facility for quickly updating a previously fetched row</li>
-    <li>Useful methods to obtain table DDL and the last executed SQL statement</li>
-    <li>Error handling of SQL statements</li>
-    <li>Camel/Pascal case naming convention for Attributes/Class used for mapping
-        Fields/Table</li>
-    <li>Useful PHPDOC information about table, fields and the usage of class,
-        attributes and methods.</li>
-</ul>
+
+- A constructor for managing a fetched table’s row or for a adding a new one<
+- Management for both single or composite Primary Keys
+- Automatic mapping of the different date formats may occurs between application and database
+- Destructor to automatically close database connection
+- Defines a set of attributes corresponding to the table fields
+- Setter and Getter methods for each attribute
+- OO methods for simplify DML select, insert, update and delete operations
+- A facility for quickly updating a previously fetched row
+- Useful methods to obtain table DDL and the last executed SQL statement
+- Error handling of SQL statements
+- Camel/Pascal case naming convention for Attributes/Class used for mapping Fields/Table
+- Useful PHPDOC information about table, fields and the usage of class, attributes and methods
+
 Developers can quickly use these classes on their application.<br>
 Into the beans directory are located some auto generated classes of a MySQL schema.<br>
 DDL for MySQL schema is into a script file located into "sql" directory.<br>
