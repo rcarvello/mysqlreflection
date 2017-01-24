@@ -19,7 +19,9 @@ An auto generated MySQL class provides the following services:
 - Useful PHPDOC information about table, fields and the usage of class, attributes and methods
 
 Developers can quickly use these generated classes on their application.
+
 Into the beans directory are located some auto generated classes of a MySQL schema.
+
 DDL for MySQL schema is into a script file located into "sql" directory.
 
 ### Overview
