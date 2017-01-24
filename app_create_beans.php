@@ -12,7 +12,7 @@ echo "Building classes for mysql schema: <b>" . DBNAME . "</b><hr>";
 // Destination path for the generated classes
 $destinationPath = dirname(__FILE__) . "/beans/";
 
-// Create reflection object and invoke classes generation from the specified schema into mysql_connection.inc.php
+// Create reflection object and invoke classes generation from the specified schema into mysqlreflection.config.php
 $reflection = new MVCMySqlSchemaReflection();
 
 // Generates the classes into the given path. During the generation it outputs the results.
