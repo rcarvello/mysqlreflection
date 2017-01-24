@@ -18,15 +18,15 @@ An auto generated MySQL class provides the following services:
 - Camel/Pascal case naming convention for Attributes/Class used for mapping Fields/Table
 - Useful PHPDOC information about table, fields and the usage of class, attributes and methods
 
-Developers can quickly use these classes on their application.
+Developers can quickly use these generated classes on their application.
 Into the beans directory are located some auto generated classes of a MySQL schema.
 DDL for MySQL schema is into a script file located into "sql" directory.
 
 ### Overview
-![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/MySQLReflection.png)
+![Overview](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/MySQLReflection.png)
 
 ### UML Class Model
-![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/UMLClassModel.png)
+![Uml Classes Model](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/UMLClassModel.png)
 
 ### Convert MySQL into PHP Classes automatically - Video Tutorial
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/7Aa_k_hWDYk/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3wURVxGteSMWeF9OtZCnrOpeVRk)](https://www.youtube.com/watch?v=7Aa_k_hWDYk)
+[![IMAGE Video Tutorial](https://i.ytimg.com/vi/7Aa_k_hWDYk/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3wURVxGteSMWeF9OtZCnrOpeVRk)](https://www.youtube.com/watch?v=7Aa_k_hWDYk)
