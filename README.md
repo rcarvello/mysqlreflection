@@ -3,6 +3,8 @@
 The utility generates automatically classes for any tables of a given database
 schema.
 It's extracted from my PHP Web MVC Framework
+
+
 An auto generated MySQL class provides the following services:
 
 - A constructor for managing a fetched table’s row or for a adding a new one<
