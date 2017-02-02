@@ -79,7 +79,7 @@ function showBeanOperationResult($operation, BeanSinglePkDate $bean,$result,$ddl
 }
 
 /**
- * Shows some information about current sales agent object
+ * Shows some information about current object
  * @param mixed $bean
  * @param string $operation the class operation
  * @param bool $showDdl
