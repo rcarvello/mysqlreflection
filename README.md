@@ -7,7 +7,7 @@ It's extracted from my PHP Web MVC Framework
 
 An auto generated MySQL class provides the following services:
 
-- A constructor for managing a fetched table’s row or for a adding a new one<
+- A constructor for managing a fetched table’s row or for a adding a new one
 - Management for both single or composite Primary Keys
 - Automatic mapping of the different date formats may occurs between application and database
 - Destructor to automatically close database connection
