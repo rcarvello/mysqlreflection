@@ -1,5 +1,5 @@
 # MySQLReflection
-## A useful utility for the Object Relation Mapping of MySQL databases
+## A useful utility for the Object Relational Mapping of MySQL databases
 The utility generates automatically classes for any tables of a given database
 schema.
 It's extracted from my PHP Web MVC Framework
