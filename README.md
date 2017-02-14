@@ -5,7 +5,7 @@ schema.
 It's extracted from my PHP Web MVC Framework
 
 
-An auto generated MySQL class provides the following services:
+An auto generated PHP class provides the following services for a MySQL table:
 
 - A constructor for managing a fetched table’s row or for a adding a new one
 - Management for both single or composite Primary Keys
