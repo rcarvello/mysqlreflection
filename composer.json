@@ -1,0 +1,16 @@
+{
+  "require":
+  {
+    "phpclasses/mysqlreflection": ">=1.0.0"
+  },
+  "repositories":
+  [
+    {
+      "type": "composer",
+      "url": "https:\/\/www.phpclasses.org\/"
+    },
+    {
+      "packagist": false
+    }
+  ]
+}
