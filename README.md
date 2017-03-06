@@ -3,7 +3,7 @@
 This package generates PHP classes from MySQL tables.
 It's extracted from my PHP Web MVC Framework.
 
-It is able to access to a given MySQL database, to retrieve from a schema, tables and fields. Then, for each  table, generates a class that provides methods for accessing, reading and writing its records by using object oriented programming logic.
+It is able to access to a given MySQL database, to retrieve from a schema tables and fields. Then, for each  table, generates a class that provides methods for accessing, reading and writing its records by using object oriented programming logic.
 
 Each auto-generated PHP class provides Setter and Getter methods for all table fields, as well as methods for  CRUD operations.
 
@@ -20,6 +20,8 @@ An auto generated PHP class provides the following services for a MySQL table:
 - Useful methods to obtain table DDL and the last executed SQL statement
 - Error handling of SQL statements
 - Camel/Pascal case naming convention for Attributes/Class used for mapping Fields/Table
+- Escaping of Strings and casting of Integers into SQL sintax for preventing SQL injection
+- Management of the Date type according to a custom localization
 - Useful PHPDOC information about table, fields and the usage of class, attributes and methods
 
 Developers can quickly use these generated classes on their application.
