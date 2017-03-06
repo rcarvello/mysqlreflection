@@ -1,9 +1,11 @@
 # MySQLReflection
 ## A useful utility for the Object Relational Mapping of MySQL databases
-The utility generates automatically classes for any tables of a given database
-schema.
-It's extracted from my PHP Web MVC Framework
+This package generates PHP classes from MySQL tables.
+It's extracted from my PHP Web MVC Framework.
 
+It is able to access to a given MySQL database, to retrieve from a schema, tables and fields. Then, for each  table, generates a class that provides methods for accessing, reading and writing its records by using object oriented programming logic.
+
+Each auto-generated PHP class provides Setter and Getter methods for all table fields, as well as methods for  CRUD operations.
 
 An auto generated PHP class provides the following services for a MySQL table:
 
