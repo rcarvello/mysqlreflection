@@ -15,8 +15,8 @@ folder.
 
 Note:
 - Auto generated classes are prefixed with "Bean".
-- Each auto generated classes uses bean\bean.config.php for configuration info.
-- Each auto generated classes uses Model.php and MySqlRecord.php
+- Each auto generated class uses bean\bean.config.php for configuration info.
+- Each auto generated class uses Model.php and MySqlRecord.php
 
 
 An auto generated MySQL class provides the following services:<br>
