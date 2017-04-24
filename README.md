@@ -42,6 +42,9 @@ Into the beans directory are located some auto generated classes of a MySQL sche
 DDL for MySQL schema is into a script file located into "sql" directory.<br>
 There is also a simple tester script "app_run_bean.php" for showing usage of a generated class<br>
 
+### Utility GUI
+![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/gui.png)
+
 ### Overview
 ![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/MySQLReflection.png)
 
