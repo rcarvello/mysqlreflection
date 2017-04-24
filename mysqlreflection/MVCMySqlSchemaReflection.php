@@ -29,14 +29,11 @@ class MVCMySqlSchemaReflection extends  mysqli
      */
     public function __construct()
     {
-        // $currentErrorLevel = error_reporting();
-        // error_reporting(0);
         $this->connect(DBHOST,DBUSER,DBPASSWORD,DBNAME,DBPORT);
         if ($this->connect_errno) {
             printf("Connection failed. Modify MySQL connection settings into <b>mysql_connection.inc.php</b> file.");
             exit();
         }
-        // error_reporting($currentErrorLevel);
     }
 
     /**
@@ -58,32 +55,22 @@ class MVCMySqlSchemaReflection extends  mysqli
                $msg = "<br> Class <b>$class</b> was generated for table <b>$table</b>";$msgjs= strip_tags($msg);$msgjs= strip_tags($msg);
                $msgjs= strip_tags($msg);
                $msgjs = str_replace("\\","\\\\",$msgjs);
-               // echo $msg;
             } else if (!file_exists($path)) {
                 $msg = "<br> <b>Destination path error!</b> Unable to create classes. <br> Check if your destination path: <b>$path</b> really exists.";
                 $msgjs= strip_tags($msg);
-                $msgjs = str_replace("\\","\\\\",$msgjs);
-                // echo $msg;
-                // echo "<script>$('#results').append('". $msgjs.  "&#xA;" . "');</script>";
+                $msgjs = str_replace("\\","\\\\",$msgjs);  
                 echo "<script>aggiornaTextArea('" . $msgjs ."')</script>";
                 return false;
             } else {
                 $msg = "<br> <b>Unknow error!</b> Unable to generate classes.";
-                // echo $msg;
                 $msgjs= strip_tags($msg);
                 $msgjs = str_replace("\\","\\\\",$msgjs);
-                // echo "<script>$('#results').append('". $msgjs.  "&#xA;" . "');</script>";
                 echo "<script>aggiornaTextArea('" . $msgjs ."')</script>";
                 return false;
             }
-            // echo "<script>if (numberOfTables === 'undefined' || !numberOfTables) var numberOfTables=" .$this->totalTables ."; </script>";
-            // echo "<script>$('#results').append('". $msgjs.  "&#xA;" . "');</script>";
-
             echo "<script>setNumberOfTables(" . $this->totalTables . ")</script>";
             echo "<script>aggiornaTextArea('" . $msgjs ."')</script>";
             echo "<script>aggiornaProgressBar();</script>";
-            // echo "<script> window.scrollTo(0,document.body.scrollHeight);</script>";
-
             @flush();
             @ob_flush();
         }
