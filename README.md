@@ -7,7 +7,7 @@ Package is extracted from my personal PHP Web MVC Framework<br>
 To run the utility:
 
 1) Set your database simple by modifying mysqlreflection.config.php file.
-2) Then just run app_create_beans.php to launch utility GUI. 
+2) Then just run app_create_beans.php to launch utility GUI. (Note: GUI uses Bootstrap and jQuery from CDN. So you must have internet connection alive)
 3) Click "Generate Classes" button.
 
 After running the utility you will find all generated classes into "beans"
