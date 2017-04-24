@@ -21,7 +21,6 @@ include_once("bean.config.php");
  *  - provides useful PHPDOC information about the table, fields, class, attributes and methods.
  *
  * @extends MySqlRecord
- * @implements {ClassImplements}
  * @filesource BeanMultiplePk.php
  * @category MySql Database Bean Class
  * @package beans
@@ -174,7 +173,7 @@ class BeanMultiplePk extends MySqlRecord
 
     /**
      * Class attribute for storing the SQL DDL of table multiple_pk
-     * @var string base64 encoded $ddl
+     * @var string base64 encoded string for DDL
      */
     private $ddl = "Q1JFQVRFIFRBQkxFIGBtdWx0aXBsZV9wa2AgKAogIGBpZF9pbnRgIGludCgxMSkgTk9UIE5VTEwsCiAgYGlkX2RhdGVgIGRhdGUgTk9UIE5VTEwsCiAgYGlkX3N0cmluZ2AgdmFyY2hhcigyMCkgTk9UIE5VTEwsCiAgYGZpZWxkX3N0cmluZ2AgdmFyY2hhcigyMDApIERFRkFVTFQgTlVMTCBDT01NRU5UICduZXNzdW5hJywKICBgZmllbGRfZGF0ZWAgZGF0ZSBERUZBVUxUIE5VTEwgQ09NTUVOVCAnc3NzcycsCiAgYGZpZWxkX2RhdGVfdGltZWAgZGF0ZXRpbWUgREVGQVVMVCBOVUxMLAogIGBmaWVsZF9kZWNpbWFsYCBkZWNpbWFsKDExLDIpIERFRkFVTFQgTlVMTCwKICBgZmllbGRfaW50YCBpbnQoMTEpIERFRkFVTFQgTlVMTCwKICBgZmllbGRfdGV4dGAgdGV4dCwKICBQUklNQVJZIEtFWSAoYGlkX2ludGAsYGlkX2RhdGVgLGBpZF9zdHJpbmdgKQopIEVOR0lORT1Jbm5vREIgREVGQVVMVCBDSEFSU0VUPXV0Zjg=";
 
@@ -589,10 +588,11 @@ SQL;
             $result = $this->query($sql);
             if (!$result) {
                 $this->lastSqlError = $this->sqlstate . " - ". $this->error;
+            } else {
+                $this->select($idInt,$idDate,$idString);
+                $this->lastSql = $sql;
+                return $result;
             }
-            $this->select($idInt,$idDate,$idString);
-            $this->lastSql = $sql;
-            return $result;
         } else {
             return false;
         }

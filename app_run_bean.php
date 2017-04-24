@@ -64,7 +64,7 @@ $bean->close();
  */
 
 /**
- * Show bean information and the MySQLi result for the current object operation
+ * Show Sale bean information and the MySQLi result for the current object operation
  * @param string $operation the class operation
  * @param mixed $bean current object
  * @param mysqli $result the mysql result for the operation
@@ -79,7 +79,7 @@ function showBeanOperationResult($operation, BeanSinglePkDate $bean,$result,$ddl
 }
 
 /**
- * Shows some information about current object
+ * Shows some information about current sales agent object
  * @param mixed $bean
  * @param string $operation the class operation
  * @param bool $showDdl

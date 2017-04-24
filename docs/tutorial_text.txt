@@ -1,0 +1,25 @@
+Hello,
+MySQLReflection is a PHP utility for auto generating PHP classes source code for
+all tables from a given MySQL Database.
+
+A generated class can compute CRUD operations against a MySQL Table.
+
+You can download it from:
+
+1) github      -> https://github.com/rcarvello/mysqlreflection
+2) phpclasses  -> https://www.phpclasses.org/package/10162
+
+Now I show you how it works... it is very simple:
+
+1) To set your database modify mysqlreflection.config.php
+2) Then, just run app_create_beans.php.
+ (In this demo I used the "bean_db" database. See sql\bean_db.sql and install
+  it into your local MySQL server)
+
+After running the utility you will find all generated classes into beans
+subfolders.
+
+Note:
+- Auto generated classes are prefixed with "Bean".
+- Each auto generated classes uses bean\bean.config.php for configuration info.
+- Each auto generated classes uses Model.php and MySqlRecord.php

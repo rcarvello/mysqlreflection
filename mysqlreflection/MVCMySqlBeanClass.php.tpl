@@ -21,7 +21,6 @@ include_once("bean.config.php");
  *  - provides useful PHPDOC information about the table, fields, class, attributes and methods.
  *
  * @extends {ClassParent}
- * @implements {ClassImplements}
  * @filesource {ClassFileName}
  * @category MySql Database Bean Class
  * @package {ClassPackageName}
@@ -79,7 +78,7 @@ class {ClassName} extends {ClassParent}
 <!-- BEGIN DdlAttribute -->
     /**
      * Class attribute for storing the SQL DDL of table {TableName}
-     * @var string base64 encoded $ddl
+     * @var string base64 encoded string for DDL
      */
     private $ddl = "{Ddl}";
 <!-- END DdlAttribute -->

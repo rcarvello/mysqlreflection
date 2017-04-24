@@ -21,7 +21,6 @@ include_once("bean.config.php");
  *  - provides useful PHPDOC information about the table, fields, class, attributes and methods.
  *
  * @extends MySqlRecord
- * @implements {ClassImplements}
  * @filesource BeanSinglePkString.php
  * @category MySql Database Bean Class
  * @package beans
@@ -146,7 +145,7 @@ class BeanSinglePkString extends MySqlRecord
 
     /**
      * Class attribute for storing the SQL DDL of table single_pk_string
-     * @var string base64 encoded $ddl
+     * @var string base64 encoded string for DDL
      */
     private $ddl = "Q1JFQVRFIFRBQkxFIGBzaW5nbGVfcGtfc3RyaW5nYCAoCiAgYGlkX3N0cmluZ2AgdmFyY2hhcigyMCkgTk9UIE5VTEwsCiAgYGZpZWxkX3N0cmluZ2AgdmFyY2hhcigyMDApIERFRkFVTFQgTlVMTCwKICBgZmllbGRfZGF0ZWAgZGF0ZSBERUZBVUxUIE5VTEwsCiAgYGZpZWxkX2RhdGVfdGltZWAgZGF0ZXRpbWUgREVGQVVMVCBOVUxMLAogIGBmaWVsZF9kZWNpbWFsYCBkZWNpbWFsKDExLDIpIERFRkFVTFQgTlVMTCwKICBgZmllbGRfaW50YCBpbnQoMTEpIERFRkFVTFQgTlVMTCwKICBgZmllbGRfdGV4dGAgdGV4dCwKICBQUklNQVJZIEtFWSAoYGlkX3N0cmluZ2ApIFVTSU5HIEJUUkVFCikgRU5HSU5FPUlubm9EQiBERUZBVUxUIENIQVJTRVQ9dXRmOA==";
 
@@ -503,10 +502,11 @@ SQL;
             $result = $this->query($sql);
             if (!$result) {
                 $this->lastSqlError = $this->sqlstate . " - ". $this->error;
+            } else {
+                $this->select($idString);
+                $this->lastSql = $sql;
+                return $result;
             }
-            $this->select($idString);
-            $this->lastSql = $sql;
-            return $result;
         } else {
             return false;
         }
