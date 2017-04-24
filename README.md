@@ -2,7 +2,7 @@
 ## A useful utility for the Object Relation Mapping of MySQL databases
 The utility generates automatically PHP classes for any tables of a given database
 schema.<br>
-Package it's extracted from my personal PHP Web MVC Framework<br>
+Package is extracted from my personal PHP Web MVC Framework<br>
 
 To run the utility:
 
