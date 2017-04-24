@@ -100,14 +100,7 @@ if (isset($_GET["build"])) {
      *  Demo application: generate classes from a mysql db schema
      */
 
-    // CLI mode
-    // error_reporting(E_ALL);
-    // include_once("mysqlreflection/mysqlreflection.config.php");
-    // header('Content-Type: text/html; charset=utf-8');
-
     $msg = "Building classes for mysql schema:[" . DBNAME . "]";
-    // CLI mode
-    // echo $msg;
     echo "<script>$('#results').append('" . $msg . "&#xA;" . "');</script>";
 
     // Destination path for the generated classes
@@ -119,10 +112,6 @@ if (isset($_GET["build"])) {
 
     // Generates the classes into the given path. During the generation it outputs the results.
     $reflection->generateClassesFromSchema($destinationPath);
-
-    // CLI Mode
-    // echo "<hr>Done.";
-    // echo "<script> window.scrollTo(0,document.body.scrollHeight);</script>";
 
     echo "<script>$('#results').append('" . "Done." . "&#xA;" . "');</script>";
     echo "<script>aggiornaProgressBar(true);</script>";
