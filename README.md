@@ -1,8 +1,9 @@
 # MySQLReflection
 ## A useful utility for the Object Relation Mapping of MySQL databases
 The utility generates automatically PHP classes for any tables of a given database
-schema.<br>
-Package is extracted from my personal PHP Web MVC Framework<br>
+schema.
+
+Package is extracted from my personal PHP Web MVC Framework.
 
 To run the utility:
 
@@ -14,6 +15,7 @@ After running the utility you will find all generated classes into "beans"
 folder.
 
 Note:
+
 - Auto generated classes are prefixed with "Bean".
 - Each auto generated class uses bean\bean.config.php for configuration info.
 - Each auto generated class uses Model.php and MySqlRecord.php
@@ -37,10 +39,14 @@ An auto generated MySQL class provides the following services:
 * Useful PHPDOC information about table, fields and the usage of class,
 	attributes and methods.
     
-Developers can quickly use these classes on their application.<br>
-Into the beans directory are located some auto generated classes of a MySQL schema.<br>
-DDL for MySQL schema is into a script file located into "sql" directory.<br>
-There is also a simple tester script "app_run_bean.php" for showing usage of a generated class<br>
+Developers can quickly use these classes on their application.
+
+Into the beans directory are located some auto generated classes of a MySQL schema.
+
+DDL for MySQL schema is into a script file located into "sql" directory.
+
+There is also a simple tester script "app_run_bean.php" for showing usage of a generated class.
+
 
 ### Utility GUI
 ![alt tag](https://raw.githubusercontent.com/rcarvello/mysqlreflection/master/docs/gui.png)
