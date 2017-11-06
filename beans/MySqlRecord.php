@@ -1,6 +1,7 @@
 <?php
 /**
  * Class MySqlRecord
+ * Base class for the auto generated beans
  *
  * @author Rosario Carvello <rosario.carvello@gmail.com>
  * @version GIT:v1.1.0
@@ -77,6 +78,21 @@ class MySqlRecord extends Model
         $constants = get_defined_constants();
 
         if ( $type=="int" || $type=="float" || $type=="real" || $type=="double") {
+            if ($value !=null) {
+                switch ($type) {
+                    case "double":
+                        $value = (double)$value;
+                        break;
+                    case "float":
+                        $value = (float)$value;;
+                        break;
+                    case "real":
+                        $value = (real)$value;;
+                        break;
+                    default:
+                        $value = (int)$value;;
+                }
+            }
             $type = "number";
         }
         if ($value==null) {

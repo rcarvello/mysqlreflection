@@ -1,6 +1,7 @@
 <?php
 /**
  * Class Model
+ * Class to interact with MySQL (simply by extending PHP msqli)
  *
  * @note Extracted from my PHP Web MVC Framework
  *
