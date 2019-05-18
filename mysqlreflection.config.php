@@ -5,7 +5,7 @@
  */
 define("DBHOST","localhost");
 define("DBUSER","root");
-define("DBPASSWORD","letmysql");
+define("DBPASSWORD","password");
 define("DBNAME","bean_db");
 define('DBPORT', '3306');
 
