@@ -5,11 +5,18 @@ schema.
 
 Package is extracted from my personal PHP Web MVC Framework.
 
-To run the utility:
+To generate PHP classes with the purpose of mapping database tables you need to:
 
-1) Set your database by modifying mysqlreflection.config.php file.
-2) Then just run app_create_beans.php to launch utility GUI. (Note: GUI uses Bootstrap and jQuery from CDN. So you must have internet connection alive)
-3) Click "Generate Classes" button.
+1) IMPORTANT! Use lowercase with the underscore, which is the widely used MySQL naming notation, on your database tables and fields names.
+
+2) Configure your database schema by modifying `util\mysqlreflection\mysqlreflection.config.php` file and, assigning appropriate values to DBHOST, DBNAME, DBUSER, DBPASSWORD, and DBPORT PHP constants, according to your MySQL settings.   
+
+3) Then, launch the tool by typing:  
+   `http/localhost/util/app_create_beans.php` 
+    Note that, the GUI of the utility uses Bootstrap and jQuery from CDN. So you also need an internet connection alive before running it.   
+
+4) Once the utility is started, click "_Generate classes_" button.   
+
 
 After running the utility you will find all generated classes into "beans"
 folder.
