@@ -66,3 +66,12 @@ There is also a simple tester script "app_run_bean.php" for showing usage of a g
 
 ### Convert MySQL into PHP Classes automatically - Video Tutorial (old user interface)
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/7Aa_k_hWDYk/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3wURVxGteSMWeF9OtZCnrOpeVRk)](https://www.youtube.com/watch?v=7Aa_k_hWDYk)
+
+## Thanks
+Many and many thanks to       
+![https://www.jetbrains.com](https://raw.githubusercontent.com/rcarvello/webmvcframework/master/docs/jetbrains.png)  
+for granting me an open source license of magic   
+   
+![https://www.jetbrains.com/phpstorm/](https://raw.githubusercontent.com/rcarvello/webmvcframework/master/docs/phpstorm.png)   **PHPStorm**       
+    
+that I used in the development of PHP Web MVC Framework.   
