@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
 include_once("mysqlreflection.config.php");
+define("DESTINATION_PATH",dirname(__FILE__) . "/beans/");
 ?>
 
 <!DOCTYPE html>
@@ -11,14 +11,13 @@ include_once("mysqlreflection.config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap core CSS -->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/11F1C66A-3ADD-7A47-AD0A-773DFF1E736D/main.js" charset="UTF-8"></script></head>
     <style>
         .progress {
                 background: rgba(204, 237, 220, 1);
@@ -36,8 +35,10 @@ include_once("mysqlreflection.config.php");
     <h3>This utility performs automatically  a source code generation of PHP
         Classes from MySQL tables </h3>
     <h4>Current database :<?= DBNAME ?> (to change it edit mysqlreflection.config.php)</h4>
-    <a class="btn btn-success" onclick="document.getElementById('results').value = ''" href="?build=1"><span class="glyphicon glyphicon-wrench"></span> Generate classes</a>
+    <h4>Destination path :<?= DESTINATION_PATH ?></h4>
 
+    <a class="btn btn-success" onclick="document.getElementById('results').value = ''" href="?build=1"><span class="glyphicon glyphicon-wrench"></span> Generate classes</a>
+    <a href="../builders/index" class="btn btn-info"><span class="glyphicon glyphicon-home"></span> Home</a>
     <br />  <br />
     <div class="progress progress-striped">
         <div class="progress-bar" role="progressbar" aria-valuenow="0"
@@ -50,10 +51,10 @@ include_once("mysqlreflection.config.php");
     </div>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <script>
     function aggiornaProgressBar(done=false) {
@@ -84,6 +85,7 @@ include_once("mysqlreflection.config.php");
     function aggiornaTextArea(msg){
         var m = msg + '&#xA;';
         $('#results').append(m);
+
     }
 
     function setNumberOfTables(ntables){
@@ -100,11 +102,18 @@ if (isset($_GET["build"])) {
      *  Demo application: generate classes from a mysql db schema
      */
 
+    // CLI mode
+    // error_reporting(E_ALL);
+    // include_once("mysqlreflection/mysqlreflection.config.php");
+    // header('Content-Type: text/html; charset=utf-8');
+
     $msg = "Building classes for mysql schema:[" . DBNAME . "]";
-    echo "<script>$('#results').append('" . $msg . "&#xA;" . "');</script>";
+    // CLI mode
+    // echo $msg;
+    echo "<script>$('#results').append('" . $msg . "');</script>";
 
     // Destination path for the generated classes
-    $destinationPath = dirname(__FILE__) . "/beans/";
+    $destinationPath = DESTINATION_PATH;
     // $destinationPath = "source/";
 
     // Create reflection object and invoke classes generation from the specified schema into mysql_connection.inc.php
@@ -112,6 +121,10 @@ if (isset($_GET["build"])) {
 
     // Generates the classes into the given path. During the generation it outputs the results.
     $reflection->generateClassesFromSchema($destinationPath);
+
+    // CLI Mode
+    // echo "<hr>Done.";
+    // echo "<script> window.scrollTo(0,document.body.scrollHeight);</script>";
 
     echo "<script>$('#results').append('" . "Done." . "&#xA;" . "');</script>";
     echo "<script>aggiornaProgressBar(true);</script>";
