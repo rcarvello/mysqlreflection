@@ -76,7 +76,6 @@ class MySqlRecord extends Model
     protected function parseValue($value=null,$type="number")
     {
         $constants = get_defined_constants();
-        var_dump($value);
 
         if ( $type=="int" || $type=="float" || $type=="real" || $type=="double") {
             if ($value !=null) {
