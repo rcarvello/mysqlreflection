@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
-include_once("mysqlreflection/mysqlreflection.config.php");
-define("DESTINATION_PATH", dirname(__FILE__) . "/../models/beans/");
+include_once("mysqlreflection.config.php");
+define("DESTINATION_PATH", dirname(__FILE__) . "/beans/");
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
