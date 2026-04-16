@@ -43,8 +43,6 @@ define("DESTINATION_PATH", dirname(__FILE__) . "/beans/");
                 class="glyphicon glyphicon-wrench"></span> Generate classes</a>
     <a class="btn btn-warning" href="app_create_selected_bean.php">
     <span class="glyphicon glyphicon-list"></span> Generate beans by selecting tables</a>             
-    <a href="../builders/index" class="btn btn-info"><span class="glyphicon glyphicon-home"></span> Home</a>
-    
     <br/> <br/>
     <div class="progress progress-striped">
         <div class="progress-bar" role="progressbar" aria-valuenow="0"
