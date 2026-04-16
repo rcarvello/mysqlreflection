@@ -1,9 +1,7 @@
 <!-- BEGIN PhpHeader --><?php
-include_once("bean.config.php");
-
 /**
  * Class {ClassName}
- * Bean class for object oriented management of the MySQL table {TableName}
+ * Bean class for ORM management of the MySQL table {TableName}
  *
  * Comment of the managed table {TableName}: {TableComment}.
  *
@@ -21,20 +19,22 @@ include_once("bean.config.php");
  *  - provides useful PHPDOC information about the table, fields, class, attributes and methods.
  *
  * @extends {ClassParent}
+ * @implements {ClassImplements}
  * @filesource {ClassFileName}
  * @category MySql Database Bean Class
  * @package {ClassPackageName}
  * @author {AuthorName} <{AuthorEmail}>
  * @version GIT:{ClassVersion}
  * @note  This is an auto generated PHP class builded with MVCMySqlReflection, a small code generation engine extracted from the author's personal MVC Framework.
- * @copyright (c) 2016 {AuthorName} <{AuthorEmail}> - All rights reserved. See License.txt file
+ * @copyright (c) 2016-2023 {AuthorName} <{AuthorEmail}> - All rights reserved. See License.txt file
  * @license BSD
  * @license https://opensource.org/licenses/BSD-3-Clause This software is distributed under BSD Public License.
 */
+namespace models\beans;
+use framework\MySqlRecord;
+use framework\Bean;
 
-// namespace beans;
-
-class {ClassName} extends {ClassParent}
+class {ClassName} extends {ClassParent} implements {ClassImplements}
 {
     /**
      * A control attribute for the update operation.
@@ -78,7 +78,7 @@ class {ClassName} extends {ClassParent}
 <!-- BEGIN DdlAttribute -->
     /**
      * Class attribute for storing the SQL DDL of table {TableName}
-     * @var string base64 encoded string for DDL
+     * @var string base64 encoded $ddl
      */
     private $ddl = "{Ddl}";
 <!-- END DdlAttribute -->
@@ -94,6 +94,7 @@ class {ClassName} extends {ClassParent}
      */
     public function __construct(${ClassPkAttributeName} = null)
     {
+        // $this->connect(DBHOST,DBUSER,DBPASSWORD,DBNAME,DBPORT);
         parent::__construct();
         if (!empty(${ClassPkAttributeName})) {
             $this->select(${ClassPkAttributeName});
@@ -112,27 +113,13 @@ class {ClassName} extends {ClassParent}
     */
     public function __construct({PKDMLFunctionParametersNullDefault})
     {
+        // $this->connect(DBHOST,DBUSER,DBPASSWORD,DBNAME,DBPORT);
         parent::__construct();
         if ({PKDMLFunctionParametersIsNotNull}) {
             $this->select({PKDMLFunctionParameters});
         }
     }
 
-    /**
-    * The implicit destructor
-    */
-    public function __destruct()
-    {
-        $this->close();
-    }
-
-    /**
-    * Explicit destructor. It calls the implicit destructor automatically.
-    */
-    public function close()
-    {
-        unset($this);
-    }
 <!-- END ConstructorForMultiplePK -->
 <!-- BEGIN Setters -->
     /**
@@ -396,7 +383,7 @@ SQL;
             $result = $this->query($sql);
             if (!$result) {
                 $this->lastSqlError = $this->sqlstate . " - ". $this->error;
-            } else {
+            }   else {
                 $this->select({PKDMLFunctionParameters});
                 $this->lastSql = $sql;
                 return $result;
